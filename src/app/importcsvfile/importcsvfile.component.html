@@ -1,0 +1,20 @@
+<div class="uploadPage" >
+  <div class=" row raboHeader">
+    <img class="rabo_logo" src="/assets/Rabobank_logo.png">
+  </div>
+  <div class="row UploadFile">
+    <label>Select CSV File </label>
+    <input type="file" #fileImportInput name="File Upload" id="txtFileUpload" (change)="fileChangeListener($event)"
+      accept=".csv" />
+    <table  style="margin: 0px auto">
+      <tr>
+        <th *ngFor="let headerRow of csvRecords[0]; let i = index">
+          <b><button class="headerbutton" (click)="sortTable(i)">{{headerRow}}</button> </b>
+        </th>
+      </tr>
+      <tr *ngFor="let row of csvRecords| slice:1">
+        <td *ngFor="let cell of row">{{cell}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
