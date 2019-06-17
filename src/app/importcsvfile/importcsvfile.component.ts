@@ -35,6 +35,7 @@ export class ImportcsvfileComponent implements OnInit {
           ;
 
         let csvRecordsArray = (csvData as string).replace(/"/g, "").split(/\r\n|\n/);
+        console.log(csvRecordsArray);
         for (let i = 0; i < csvRecordsArray.length; i++) {
           let rowdata = csvRecordsArray[i].match(/(“[^”]*”)|[^,]+/g);
           console.log('row data', i, rowdata)
@@ -61,7 +62,7 @@ export class ImportcsvfileComponent implements OnInit {
     let headerRow = this.csvRecords[0];
     temp.sort((a, b) => {
       // we could've also used strcmpi instead of using the user defined string compare function
-      return this.compare(a[index], b[index]);
+      return this.compare(a[2], b[2]);
     });
     this.csvRecords = [];
     this.csvRecords.push(headerRow);

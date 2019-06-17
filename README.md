@@ -1,27 +1,24 @@
-# RabobankFE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+Rabobank Customer records to track the issues
 
-## Development server
+How to run the application:<br>
+    > Clone the project from the GITHUB repo<br>
+    > Import the project folder from the file to the Visual Studio Code<br>
+    > run the command npm install to install the node modules in the project folder<br>
+    > run the command ng serve to run the Rabobank application in the browser<br>
+    > in a browser navigate to "http://localhost:4200"<br>
+    > run the command ng test to run the testcases of the Rabobank application<br>
+    > check the code coverage folder is created in the project folder <br>
+    > click on the index.html file in the coverage folder to check the code coverage in the browser <br>
+    > click on the links displayed in the browser to check the code coverage lines of the code<br><br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Outputs Expected:<br>
+    > The page will be displayed with the  field to select the file from the computer <br>
+    > The records will be displayed in the screen from the {filename}.csv once the user selects the file from my computer<br>
+    > Sorting will be done when the user clicks on any header column <br>
+    > data will be erased when user clicks on the reset to select another file <br><br>
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Assumptions:<br>
+    > The file to the processed should be found in the assets folder<br>
+    > Any number of files can be put in the folder but the format should be csv<br>
+    
