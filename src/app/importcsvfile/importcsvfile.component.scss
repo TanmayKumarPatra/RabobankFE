@@ -1,11 +1,11 @@
+.container-fluid{
+    margin: 15px 15px 15px 15px !important;
+}
 .uploadPage{
     background: #eee;
     width: 100%
 }
 .UploadFile{
-    // margin-top: 200px;
-    // margin-left: 50%;
-    // background: #eee;
     margin-top: 50px;
     /* margin-left: 39%; */
     background: #eee;
@@ -19,19 +19,31 @@
     background: #eee;
 }
 .headerbutton{
-    border: 0px;
-    font-size: medium;
+    background-color: #dddddd !important;
 }
-// .table{
-//     align: center;
-// }
 .table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 100%;    
+    max-height: 600px;
+    overflow: auto;
   }
-  td, th {
+.tbody{    
+    overflow: auto;
+}
+td, th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
-  }
+}
+
+.jumbotron{
+    width : 100%;
+    align-content: center;
+    background-color: cadetblue;
+}
+.display-4{
+    background-color: cadetblue;
+    font-weight: 600;
+    padding-left: 40%;
+}

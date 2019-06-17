@@ -18,6 +18,10 @@ export class ImportcsvfileComponent implements OnInit {
   ngOnInit() {
 
   }
+  resetFile() {
+    this.fileImportInput.nativeElement.value = "";
+    this.csvRecords = []
+  }
 
   fileChangeListener(response: any): void {
     var files = response.srcElement.files;
@@ -28,7 +32,7 @@ export class ImportcsvfileComponent implements OnInit {
       reader.onload = (data) => {
         let csvData = reader.result;
         console.log('csvData', csvData)
-        ;
+          ;
 
         let csvRecordsArray = (csvData as string).replace(/"/g, "").split(/\r\n|\n/);
         for (let i = 0; i < csvRecordsArray.length; i++) {
@@ -57,11 +61,11 @@ export class ImportcsvfileComponent implements OnInit {
     let headerRow = this.csvRecords[0];
     temp.sort((a, b) => {
       // we could've also used strcmpi instead of using the user defined string compare function
-      return this.compare(a[2], b[2]);
+      return this.compare(a[index], b[index]);
     });
     this.csvRecords = [];
     this.csvRecords.push(headerRow);
-    for(let element of temp) {
+    for (let element of temp) {
       this.csvRecords.push(element);
     }
   }
